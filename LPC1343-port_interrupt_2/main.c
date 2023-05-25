@@ -10,9 +10,9 @@ int main(void)
         LPC_GPIO3->IS &= ~(0x00); // 0 = PIOn_x pinindeki kesme kenara duyarli olarak yapilandirilir.
         LPC_GPIO3->IBE &= ~(0x00); // controlled by register IEV
         LPC_GPIO3->IEV |= (0x04); // 1 = GPIOIS kaydindaki ayara bagli olarak,
-        // PIOn_x pimindeki yÃ¼kselen kenarlar veya YÃœKSEK seviye bir kesmeyi tetikler. 
+        // PIOn_x pimindeki yükselen kenarlar veya YÜKSEK seviye bir kesmeyi tetikler. 
         /*LPC_GPIO3->IEV &= ~(0x00);//0 = GPIOIS kaydindaki ayara bagli olarak,
-        // PIOn_x pinindeki dÃ¼sen kenarlar veya DÃœSÃœK seviye bir kesmeyi tetikler.*/
+        // PIOn_x pinindeki düsen kenarlar veya DÜSÜK seviye bir kesmeyi tetikler.*/
         while(!(((Button=LPC_GPIO3->RIS)&0x04)==0x04)){};// Kesme hazirligi tamamdir
         LPC_GPIO3->IE |= 0x04; // P3.2 Kesmesi aktif
         // Kesme
