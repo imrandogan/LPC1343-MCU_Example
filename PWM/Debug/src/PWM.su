@@ -1,0 +1,4 @@
+../src/PWM.c:26:6:main	8	static
+../src/PWM.c:36:6:SystemCLKInit	16	static
+../src/PWM.c:69:6:PWM_Init	4	static
+../src/PWM.c:85:6:Timer16_1_init	4	static
